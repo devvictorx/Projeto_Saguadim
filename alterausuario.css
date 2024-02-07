@@ -1,0 +1,79 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    color: #fff; /* Alterando a cor do texto para branco para um contraste elegante */
+}
+
+.alterausuario-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.wrapper {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #333; /* Cor do texto dentro do container */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+h3 {
+    margin-top: 15px;
+    color: #3498db; /* Cor do título alterada para azul para destaque */
+}
+
+.input-box {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    color: #333;
+    background-color: #f4f4f4;
+    font-size: 16px;
+}
+
+#form-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.radio-label {
+    margin-left: 10px;
+    color: #333;
+}
+
+.btn {
+    background-color: #3498db;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #007bb5;
+    color: #fff; /* Garantindo que a cor do texto seja sempre visível em qualquer estado */
+}

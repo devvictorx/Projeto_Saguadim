@@ -1,0 +1,114 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.listausuario-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.table {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table-header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table-header h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.form-container {
+    display: flex;
+}
+
+.radio {
+    display: none;
+}
+
+.radio-label {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #474141;
+    color: #fff;
+    border-radius: 4px;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.radio-label:hover {
+    background-color: #7a7979;
+}
+
+.radio:checked + .radio-label {
+    background-color: #4c7faf;
+}
+
+.table-body {
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #4c74af;
+    color: #fff;
+}
+
+.even {
+    background-color: #f2f2f2;
+}
+
+.odd {
+    background-color: #e6e6e6;
+}
+
+.status {
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.ativo {
+    background-color: #4CAF50;
+}
+
+.inativo {
+    background-color: #FF5733;
+}
+
+.btn-alterar {
+    background-color: #4c74af;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-alterar:hover {
+    background-color: #4c90af;
+}
