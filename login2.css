@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Ajuste para um tom mais escuro */
+    color: #fff;
+    font-family: Arial, sans-serif; /* Fonte mais comum */
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#login, #cadastra {
+    background-color: #222; /* Ajuste para um tom mais escuro */
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    max-width: 500px;
+   
+    box-sizing: border-box;
+    padding: 20px; /* Adicionado para espaçamento interno */
+}
+
+#cadastra {
+    margin: 20px auto; /* Centralização corrigida */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 10px; /* Reduzido o espaçamento inferior */
+    font-size: 16px;
+}
+
+input {
+    padding: 12px;
+    margin-bottom: 15px; /* Reduzido o espaçamento inferior */
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: #fff;
+    box-sizing: border-box;
+    background-color: #333; /* Ajuste para um tom mais escuro */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+input[type="submit"]:active,
+input[type="text"]:hover,
+input[type="text"]:focus,
+input[type="text"]:active {
+    background-color: #007bb5; /* Efeito de hover consistente */
+    border-color: #005f88; /* Efeito de hover consistente */
+}
+
+h5 {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 18px;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #007bb5;
+}

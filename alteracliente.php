@@ -1,7 +1,10 @@
 <?php
-include("cabecalho.php");
+// Inclui o arquivo de conexão com o banco de dados
+include("conectadb.php");
 
+// Verifica se o formulário foi submetido
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Recupera os dados do formulário
     $id = $_POST['id'];
     $nome = $_POST['nome'];
     $email = $_POST['email'];
@@ -12,22 +15,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $saldo = $_POST['saldo'];
     $status = $_POST['status'];
 
-  
+    // Monta a instrução SQL para atualizar os dados do cliente
     $sql = "UPDATE clientes SET cli_nome = '$nome', cli_email = '$email', cli_telefone = '$telefone', cli_cpf = '$cpf',
     cli_curso = '$curso', cli_sala = '$sala', cli_saldo = '$saldo', cli_status = '$status'";
-
+    
     $sql .= " WHERE cli_id = $id";
 
+    // Executa a instrução SQL
     mysqli_query($link, $sql);
 
-    echo "<script>window.alert('cliente alterado com sucesso!');</script>";
+    // Exibe um alerta e redireciona para a página de lista de clientes
+    echo "<script>window.alert('Cliente alterado com sucesso!');</script>";
     echo "<script>window.location.href='listacliente.php';</script>";
 }
 
+// Recupera o ID do cliente da URL
 $id = $_GET['id'];
+
+// Seleciona os dados do cliente pelo ID
 $sql = "SELECT * FROM clientes WHERE cli_id = '$id'";
 $retorno = mysqli_query($link, $sql);
 
+// Obtém os dados do cliente
 while ($tbl = mysqli_fetch_array($retorno)) {
     $nome =  $tbl[1];
     $email =  $tbl[2];
@@ -44,9 +53,10 @@ while ($tbl = mysqli_fetch_array($retorno)) {
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="alteracliente.php">
+        <link rel="stylesheet" href="alteracliente.css">
+        <link rel="stylesheet" href="cabecalho.css">
         
         <title>ALTERA USUÁRIO</title>
     </head>
@@ -54,6 +64,7 @@ while ($tbl = mysqli_fetch_array($retorno)) {
         <div class="alteracliente-container">
             <div class="wrapper">
                 <form action="alteracliente.php" method="post" enctype="multipart/form-data">
+                    <!-- Input hidden para armazenar o ID do cliente -->
                     <input type="hidden" name="id" value="<?=$id?>">
                     <h3>Cliente</h3>
                     <div class="input-box" id="input-box-name">
